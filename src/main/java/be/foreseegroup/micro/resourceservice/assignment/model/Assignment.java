@@ -14,10 +14,10 @@ public class Assignment {
     private String consultantId;
     private String customerId;
 
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
 
-    public Assignment(String id, String consultantId, String customerId, Date startDate, Date endDate) {
+    public Assignment(String id, String consultantId, String customerId, String startDate, String endDate) {
         this.id = id;
         this.consultantId = consultantId;
         this.customerId = customerId;
@@ -27,6 +27,13 @@ public class Assignment {
 
     public Assignment() {
 
+    }
+
+    public Assignment(String consultantId, String customerId, String startDate, String endDate) {
+        this.consultantId = consultantId;
+        this.customerId = customerId;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     public String getId() {
@@ -53,19 +60,19 @@ public class Assignment {
         this.customerId = customerId;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 }
